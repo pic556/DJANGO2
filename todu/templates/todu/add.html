@@ -1,0 +1,11 @@
+{% extends "todu/layout.html" %}
+{% block body%}
+    <h1>Agregar una Tarea</h1>
+    <form method="post">
+      {%csrf_token%}
+      {{form}}
+      <button>Enviar</button>
+
+    </form>
+    <a href="{% url 'homeURL' %}">regresar</a>
+{% endblock %}
